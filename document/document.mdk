@@ -1,0 +1,58 @@
+Title         :  Logarithmic bounds on Sobolev norms
+Author        : A. Maspero
+Logo          : True
+
+[TITLE]
+
+
+We want to obtain logarithmic bounds on the growth of the Sobolev norms
+of type
+
+~ Equation
+\|U(t)\psi\|_k \leq \log(1+|t|)^{\zeta} \|\psi\|_k
+~
+
+
+The trick is the following: assume to have $\forall N \geq 1$ the bounds
+~ Equation
+\|U(t)\psi\|_N \leq C^N (N!)^\tau \langle t \rangle \,  \|\psi\|_N
+~
+
+and when $N=0$
+
+~ Equation
+\|U(t)\psi\|_0 \leq C  \|\psi\|_0 \ .
+~
+
+
+
+Then interpolating between the two one gets
+~ Equation
+\|U(t)\psi\|_{N\theta} \leq C^{\theta N} (N!)^{\theta \tau} \langle t \rangle^{\theta} \,  \|\psi\|_{N\theta} \ .
+~
+
+ Then
+~ Equation
+\left(\frac{1}{C^{N \theta}} \frac{\|U(t)\psi\|_{N\theta}}{ \|\psi\|_{N\theta}} \right)^{\frac{1}{\tau \theta}} \leq N! \langle t \rangle^{\frac{1}{\tau}}
+~
+
+from which it follows, defining $k=N\theta$ and  $X := \left(\frac{1}{C^{k}} \frac{\|U(t)\psi\|_{k}}{ \|\psi\|_{k}} \right)^{\frac{1}{\tau k}}$,
+ the inequality
+
+~ Equation
+X^N \leq  N! \langle t \rangle^{\frac{1}{\tau}} \leq N^N \langle t \rangle^{\frac{1}{\tau}}
+~
+
+which implies that  $\forall N \geq 1$
+~ Equation
+X \leq N \langle t \rangle^{\frac{1}{N\tau}} = e^{\log N + \frac{1}{\tau N} \log\langle t \rangle}
+~
+
+Now it is enough to optimize the exponent. The best choice is for 
+$ N = \frac{\log \langle t \rangle}{\tau}$ for which one gets
+
+~ Equation
+\left(\frac{1}{C^{k}} \frac{\|U(t)\psi\|_{k}}{ \|\psi\|_{k}} \right)^{\frac{1}{\tau k}} \leq \log{\langle t \rangle}^{\frac{1}{\tau}}
+~
+
+which shows the result.
